@@ -28,4 +28,7 @@ git log --pretty=oneline 使历史提交消息显示的更清晰
 cat test.txt 查看版本库文件的内容
 git reflog 查看历史命令，使得回到未来的版本
 git reset --hard 版本号 就使版本库回到版本号的那版本
-撤销修改：1.修改未添加到暂存区，丢弃工作区的修改
+撤销修改：1.修改未添加到暂存区，丢弃工作区的修改。用 git checkout -- test.txt
+		  2.修改已经添加到暂存区，要丢弃修改，（1）用git reset head test.txt 将修改回到未添加到暂存区的状态，再用第一步
+		  3.修改添加到版本库，用 git reset --hard head 回到上一个版本
+		  
