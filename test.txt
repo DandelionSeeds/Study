@@ -32,3 +32,7 @@ git reset --hard 版本号 就使版本库回到版本号的那版本
 		  2.修改已经添加到暂存区，要丢弃修改，（1）用git reset head test.txt 将修改回到未添加到暂存区的状态，再用第一步
 		  3.修改添加到版本库，用 git reset --hard head 回到上一个版本
 		  
+删除文件：1.对于确定奥删除的文件：1.git rm my.txt 此时工作区的my.txt删除了
+								  2.git commit -m '' 把版本库的my.txt文件也删除
+		  2.对于误删的文件（只是在工作区误删了，版本库没有删）用 git checkout -- my.txt 恢复（将版本库最新的替换到工作区）
+		  
