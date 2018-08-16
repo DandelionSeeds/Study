@@ -25,3 +25,7 @@ git log ：查看历史提交信息，版本号和评论
 git log --pretty=oneline 使历史提交消息显示的更清晰
 当前版本用 head，上一个版本用head^,上上一个head^^，前第一百个head~100
 把版本库回退到上上一个版本：git reset --hard head^
+cat test.txt 查看版本库文件的内容
+git reflog 查看历史命令，使得回到未来的版本
+git reset --hard 版本号 就使版本库回到版本号的那版本
+撤销修改：1.修改未添加到暂存区，丢弃工作区的修改
