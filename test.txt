@@ -4,6 +4,9 @@
 git操作复习
 查看Git的用户名和邮箱：git config --global user.name (zhengsuhua)
 					   git config -- global user.email (1028743050@qq.com)
+2018-8-15 第二天学习 git 工作区与暂存区
+stage
+测试add之后，修改内容，进行commit。2.内容已修改，进行commit
 					   
 git init 对Git仓库进行初始化
 git add t.txt 将工作区的内容提交到暂存区
