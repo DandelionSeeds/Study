@@ -1,4 +1,12 @@
 测试文件    
 郑素华添加
 程可可添加
-df
+git操作复习
+查看Git的用户名和邮箱：git config --global user.name (zhengsuhua)
+					   git config -- global user.email (1028743050@qq.com)
+					   
+git init 对Git仓库进行初始化
+git add t.txt 将工作区的内容提交到暂存区
+git commit -m 'pinglun' 将 暂存区的内容提交到版本库
+git status 查看当前仓库的状态，包含三个区上的内容
+git diff t.txt
