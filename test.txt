@@ -9,4 +9,19 @@ git init 对Git仓库进行初始化
 git add t.txt 将工作区的内容提交到暂存区
 git commit -m 'pinglun' 将 暂存区的内容提交到版本库
 git status 查看当前仓库的状态，包含三个区上的内容
-git diff t.txt
+git diff 的用法：1.查看工作区和暂存区的不同：1.git diff (test.txt)
+				 2.查看工作区和最新版本库的差别：git diff  head 
+				 3.查看暂存区和最新版本库的区别：git diff --cached
+				 4.比较工作区和指定版本库的区别：git diff  commit_id
+				 5.比较暂存区和指定版本库的区别：git diff -- cached commit_id
+				 6.比较两个指定版本的区别：git diff commit_id1 commit_id2
+				 7.使用git diff 打补丁 ：git diff > patch(补丁名) 将工作区与暂存区的差别做成一个补丁，可以在其他文件上用：git apply 补丁名 进行打补丁
+				 git diff --cached > patch将暂存区和版本库的区别变成补丁
+				 git diff --head > patch 将工作区与版本库的差别做成一个补丁
+				 git diff firename > patch将单个文件做成补丁
+				 用 git apply --check patch 测试补丁是否可用
+				 用 git apply --reject patch 将可以打上的补丁先打上，有冲突的生成 .rej文件进行手动补上。
+git log ：查看历史提交信息，版本号和评论
+git log --pretty=oneline 使历史提交消息显示的更清晰
+当前版本用 head，上一个版本用head^,上上一个head^^，前第一百个head~100
+把版本库回退到上上一个版本：git reset --hard head^
